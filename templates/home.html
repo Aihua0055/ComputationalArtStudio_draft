@@ -5,6 +5,23 @@
 
 
 {% block content %}
-<h1 class="mt-5">Home</h1>
+
+    <div class = "container">
+    {% for content in homePageContents %}
+    <div class = "card border-0">
+        <div class="card-body">
+            <h5 class="card-title"> <a href = {{content["Link"]}}>{{content["Action"]}}</a> </h5>
+            <p class="card-text">{{ content["Text"] }}</p>            
+
+        </div>
+        <img class="card-img-bottom " src={{content["imagePath"] }} alt="Card image cap">
+
+    </div>
+    <hr>
+    {% endfor %}
+    </div>
+
+
+
 
 {% endblock %}

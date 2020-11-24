@@ -6,21 +6,33 @@
 {% block title %} Computational Art Studio|Color Harmolization {% endblock %}
 
 {% block content %}
+
  
     <div class="container">
 
 
-        <div class="jumbotron">
-            <h1>Color Harmolization: Upload your image</h1>
-            <p class="lead"></p>
-	       <form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
-            <input id="file-picker" type="file" name="file" accept="image/*" class="hidden" onchange="this.form.submit()">
-            <label for="file-picker" class="btn btn-lg btn-success">Select file</label>
-		 </form>
-        </div>
+
+            <div class = "row">
+                <div class="col-sm-6">
+                    <div class = "card" style = "width:18rem;">
+                    <img class="card-img-top" src ={{ url_for('static', filename = 'images/IMG_8135.jpg') }} alt="Country Flag">
+                    <div class="card-body">
+                        <p>Input Image</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class = "card" style = "width:18rem;">
+                        <img class="card-img-top" src ={{ url_for('static', filename = 'images/temp.png') }} alt="Country Flag">
+                        <div class="card-body">
+                            <p>Output Image</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
- 
+    <hr>
     </div>
 
 

@@ -3,48 +3,23 @@
 {% block title %} Computational Art Studio|Gallery {% endblock %}
 
 {% block content %}
- 
+
+
 <div class="container">
- 
-  <div class="jumbotron">
-      <h1>Gallery </h1>
-
-  </div>
-
-  <div class="row">
-    <div class="col-md-4">
-      <table class="table table-striped" id="owned_stock_table">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Flag</th>
-            <th>Capital City</th>
-            <th>Region</th>
-            <th>Subregion</th>
-            <th>Population</th>
-            <th>Native Name</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for recipe in recipes %}
-          <tr>
-            <td>{{ recipe.name }}</td>
-            <td><img src ={{recipe.flag }} style = "width:20px;height:17px;"></td>
-            <td>{{ recipe.capital }}</td>
-            <td>{{ recipe.region }}</td>
-            <td>{{ recipe.subregion }}</td>
-            <td>{{ recipe.population }}</td>
-            <td>{{ recipe.nativeName }}</td>
-  
-  
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+  <div class = "row">
+    {% for recipe in recipes %}
+    <div class = "col-lg-3">
+      <div class = "card" style = "width:18rem;">
+        <img class="card-img-top" src ={{recipe.flag }} alt="Country Flag">
+        <div class="card-body">
+          <p class="card-text">{{ recipe.name }}</p>
+        </div>
+      </div>
     </div>
+    {% endfor %}
   </div>
 
-
+<hr>
 
 </div>
 
