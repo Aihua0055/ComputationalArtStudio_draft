@@ -67,7 +67,7 @@ def colorharm():
         'title':'Color Harmonization',
         'jumbotron':{
             "header":"Color Harmonization",
-            "bg_image":"static/images/bg1450496.jpg",
+            "bg_image":"static/images/colorHarJ.png",
             "text": "Add text"
 
         }
@@ -79,7 +79,7 @@ def styletransfer():
         'title':'Style Transfer',
         'jumbotron':{
             "header":"Style Transfer",
-            "bg_image":"static/images/bg1450496.jpg",
+            "bg_image":"static/images/styleTransfer.jpeg",
             "text": "Add text"
 
         }
