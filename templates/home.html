@@ -10,7 +10,9 @@
     {% for content in homePageContents %}
     <div class = "card border-0">
         <div class="card-body">
-            <h5 class="card-title"> <a href = {{content["Link"]}}>{{content["Action"]}}</a> </h5>
+            <h5 class="card-title"> {{content["Title"]}}
+                <button type="button" class="btn btn-link btn-lg float-right"><a href = {{content["Link"]}}> {{content["Action"]}}</a></button>
+                 </h5>
             <p class="card-text">{{ content["Text"] }}</p>            
 
         </div>
